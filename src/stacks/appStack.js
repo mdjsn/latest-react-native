@@ -5,10 +5,12 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 // imports
 import Boiler from '../containers/boiler';
-import {TABS} from './routeKeys';
+import {TABS} from '../config/routeKeys';
 
 // styles
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+Icon.loadFont();
 
 const tabBarIcon = name => ({tintColor}) => (
   <Icon name={name} size={20} color={tintColor} />
@@ -18,34 +20,6 @@ class Discover extends React.Component {
   static navigationOptions = screenProps => ({
     tabBarLabel: 'Discover',
     tabBarIcon: tabBarIcon('rocket'),
-    header: null,
-    headerBackTitle: null,
-    tabBarVisible: screenProps.navigation.getParam('visibility'),
-  });
-
-  render() {
-    return <Boiler navigation={this.props.navigation} />;
-  }
-}
-
-class Match extends React.Component {
-  static navigationOptions = screenProps => ({
-    tabBarLabel: 'Match',
-    tabBarIcon: tabBarIcon('calendar'),
-    header: null,
-    headerBackTitle: null,
-    tabBarVisible: screenProps.navigation.getParam('visibility'),
-  });
-
-  render() {
-    return <Boiler navigation={this.props.navigation} />;
-  }
-}
-
-class Search extends React.Component {
-  static navigationOptions = screenProps => ({
-    tabBarLabel: 'Search',
-    tabBarIcon: tabBarIcon('search'),
     header: null,
     headerBackTitle: null,
     tabBarVisible: screenProps.navigation.getParam('visibility'),
@@ -73,8 +47,6 @@ class Settings extends React.Component {
 export const AppStack = createBottomTabNavigator(
   {
     [TABS.Discover]: Discover,
-    [TABS.Match]: Match,
-    [TABS.Search]: Search,
     [TABS.Settings]: Settings,
   },
   {

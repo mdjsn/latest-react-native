@@ -1,6 +1,8 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+Icon.loadFont();
+
 export default function FBLoginButton({onLogIn}) {
   const onPress = () => {
     onLogIn();

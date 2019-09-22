@@ -9,10 +9,11 @@ import Background from '../../assets/background.png';
 
 // imports
 import FBLoginButton from '../../components/FBLoginButton';
+import {RouteKeys} from '../../config/routeKeys';
 
 const Fblogin = props => {
   const loginWithFacebook = async () => {
-    props.navigation.navigate('App');
+    props.navigation.navigate(RouteKeys.App);
   };
 
   return (

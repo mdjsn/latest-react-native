@@ -7,14 +7,7 @@ import Background from '../../assets/background.png';
 
 // custom components
 
-// imports
-import FBLoginButton from '../../components/FBLoginButton';
-
-const Fblogin = props => {
-  const loginWithFacebook = async () => {
-    props.navigation.navigate('App');
-  };
-
+const App = props => {
   return (
     <React.Fragment>
       <StatusBar
@@ -24,14 +17,10 @@ const Fblogin = props => {
         barStyle="light-content"
       />
       <S.Container>
-        <S.Background source={Background}>
-          <S.Button>
-            <FBLoginButton onLogIn={loginWithFacebook} />
-          </S.Button>
-        </S.Background>
+        <S.Background source={Background} />
       </S.Container>
     </React.Fragment>
   );
 };
 
-export default Fblogin;
+export default App;
