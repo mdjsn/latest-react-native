@@ -4,8 +4,8 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 // imports
 import Splash from '../screens/splash';
-import {AuthStack} from './stacks/AuthStack';
-import {AppStack} from './stacks/AppStack';
+import {AuthStack} from '../stacks/AuthStack';
+import {AppStack} from '../stacks/AppStack';
 
 export default createAppContainer(
   createStackNavigator(

@@ -4,10 +4,7 @@ import * as React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 // imports
-import DiscoverScreen from '../../screens/discover';
-import MatchScreen from '../../screens/match';
-import SearchScreen from '../../screens/search';
-import SettingsScreen from '../../screens/settings';
+import Boiler from '../../screens/boiler';
 import {TABS} from './routeKeys';
 
 // styles
@@ -27,7 +24,7 @@ class Discover extends React.Component {
   });
 
   render() {
-    return <DiscoverScreen navigation={this.props.navigation} />;
+    return <Boiler navigation={this.props.navigation} />;
   }
 }
 
@@ -41,7 +38,7 @@ class Match extends React.Component {
   });
 
   render() {
-    return <MatchScreen navigation={this.props.navigation} />;
+    return <Boiler navigation={this.props.navigation} />;
   }
 }
 
@@ -55,7 +52,7 @@ class Search extends React.Component {
   });
 
   render() {
-    return <SearchScreen navigation={this.props.navigation} />;
+    return <Boiler navigation={this.props.navigation} />;
   }
 }
 
@@ -69,7 +66,7 @@ class Settings extends React.Component {
   });
 
   render() {
-    return <SettingsScreen />;
+    return <Boiler />;
   }
 }
 
