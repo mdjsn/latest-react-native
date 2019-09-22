@@ -4,7 +4,7 @@ import * as React from 'react';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 // imports
-import Boiler from '../../screens/boiler';
+import Boiler from '../containers/boiler';
 import {TABS} from './routeKeys';
 
 // styles
